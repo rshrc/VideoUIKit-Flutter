@@ -228,44 +228,44 @@ class _FloatingLayoutState extends State<FloatingLayout> {
                                                           MainAxisAlignment
                                                               .spaceBetween,
                                                       children: [
-                                                        Align(
-                                                          alignment:
-                                                              Alignment.topLeft,
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .all(8),
-                                                            child:
-                                                                GestureDetector(
-                                                              onTap: () {
-                                                                widget.client
-                                                                    .sessionController
-                                                                    .swapUser(
-                                                                        index:
-                                                                            index);
-                                                              },
-                                                              child: Container(
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  color: Colors
-                                                                      .white,
-                                                                  shape: BoxShape
-                                                                      .circle,
-                                                                ),
-                                                                padding:
-                                                                    const EdgeInsets
-                                                                            .all(
-                                                                        3.0),
-                                                                child: Icon(
-                                                                  Icons
-                                                                      .push_pin_rounded,
-                                                                  color: Colors
-                                                                      .blue,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ),
+                                                        // Align(
+                                                        //   alignment:
+                                                        //       Alignment.topLeft,
+                                                        //   child: Padding(
+                                                        //     padding:
+                                                        //         const EdgeInsets
+                                                        //             .all(8),
+                                                        //     child:
+                                                        //         GestureDetector(
+                                                        //       onTap: () {
+                                                        //         widget.client
+                                                        //             .sessionController
+                                                        //             .swapUser(
+                                                        //                 index:
+                                                        //                     index);
+                                                        //       },
+                                                        //       child: Container(
+                                                        //         decoration:
+                                                        //             BoxDecoration(
+                                                        //           color: Colors
+                                                        //               .white,
+                                                        //           shape: BoxShape
+                                                        //               .circle,
+                                                        //         ),
+                                                        //         padding:
+                                                        //             const EdgeInsets
+                                                        //                     .all(
+                                                        //                 3.0),
+                                                        //         child: Icon(
+                                                        //           Icons
+                                                        //               .push_pin_rounded,
+                                                        //           color: Colors
+                                                        //               .blue,
+                                                        //         ),
+                                                        //       ),
+                                                        //     ),
+                                                        //   ),
+                                                        // ),
                                                         Align(
                                                           alignment: Alignment
                                                               .topRight,
