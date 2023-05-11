@@ -162,39 +162,39 @@ class _FloatingLayoutState extends State<FloatingLayout> {
                                                       )
                                                     : widget
                                                         .disabledVideoWidget,
-                                                Positioned.fill(
-                                                  child: Align(
-                                                    alignment:
-                                                        Alignment.topLeft,
-                                                    child: Padding(
-                                                      padding:
-                                                          const EdgeInsets.all(
-                                                              8),
-                                                      child: GestureDetector(
-                                                        onTap: () {
-                                                          widget.client
-                                                              .sessionController
-                                                              .swapUser(
-                                                                  index: index);
-                                                        },
-                                                        child: Container(
-                                                          height: 24,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: Colors.blue,
-                                                            shape:
-                                                                BoxShape.circle,
-                                                          ),
-                                                          child: Icon(
-                                                            Icons
-                                                                .push_pin_rounded,
-                                                            color: Colors.white,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
+                                                // Positioned.fill(
+                                                //   child: Align(
+                                                //     alignment:
+                                                //         Alignment.topLeft,
+                                                //     child: Padding(
+                                                //       padding:
+                                                //           const EdgeInsets.all(
+                                                //               8),
+                                                //       child: GestureDetector(
+                                                //         onTap: () {
+                                                //           widget.client
+                                                //               .sessionController
+                                                //               .swapUser(
+                                                //                   index: index);
+                                                //         },
+                                                //         child: Container(
+                                                //           height: 24,
+                                                //           decoration:
+                                                //               BoxDecoration(
+                                                //             color: Colors.blue,
+                                                //             shape:
+                                                //                 BoxShape.circle,
+                                                //           ),
+                                                //           child: Icon(
+                                                //             Icons
+                                                //                 .push_pin_rounded,
+                                                //             color: Colors.white,
+                                                //           ),
+                                                //         ),
+                                                //       ),
+                                                //     ),
+                                                //   ),
+                                                // ),
                                                 widget.showAVState!
                                                     ? UserAVStateWidget(
                                                         videoDisabled: widget
