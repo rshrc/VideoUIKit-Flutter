@@ -1,4 +1,4 @@
-enum Layout { grid, floating, oneToOne }
+enum Layout { grid, floating, oneToOne, tPRC }
 
 enum BuiltInButtons {
   callEnd,

@@ -6,6 +6,7 @@ import 'package:agora_uikit/src/layout/floating_layout.dart';
 import 'package:agora_uikit/src/layout/grid_layout.dart';
 import 'package:agora_uikit/src/layout/one_to_one_layout.dart';
 import 'package:agora_uikit/src/layout/widgets/disabled_video_widget.dart';
+import 'package:agora_uikit/src/layout/widgets/tprc_layout.dart';
 import 'package:flutter/material.dart';
 
 /// A UI class to style how the video layout looks like. Use this class to choose between the two default layouts [FloatingLayout] and [GridLayout], enable active speaker, display number of users, display mic and video state of the user.
@@ -94,6 +95,21 @@ class _AgoraVideoViewerState extends State<AgoraVideoViewer> {
         return OneToOneLayout(
           client: widget.client,
           disabledVideoWidget: widget.disabledVideoWidget,
+          renderModeType: widget.renderModeType,
+        );
+
+      /// New Custom Layout
+      case Layout.tPRC:
+        return TPRCLayout(
+          client: widget.client,
+          disabledVideoWidget: widget.disabledVideoWidget,
+          floatingLayoutContainerHeight: widget.floatingLayoutContainerHeight,
+          floatingLayoutContainerWidth: widget.floatingLayoutContainerWidth,
+          floatingLayoutMainViewPadding: widget.floatingLayoutMainViewPadding,
+          floatingLayoutSubViewPadding: widget.floatingLayoutSubViewPadding,
+          showAVState: widget.showAVState,
+          enableHostControl: widget.enableHostControls,
+          showNumberOfUsers: widget.showNumberOfUsers,
           renderModeType: widget.renderModeType,
         );
       default:

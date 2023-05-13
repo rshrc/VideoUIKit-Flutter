@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final AgoraClient client = AgoraClient(
     agoraConnectionData: AgoraConnectionData(
-      appId: "<--Add your App Id here-->",
+      appId: "345019caa72d420d8561de228d10034b",
       channelName: "test",
       username: "user",
     ),
@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
             children: [
               AgoraVideoViewer(
                 client: client,
-                layoutType: Layout.floating,
+                layoutType: Layout.tPRC,
                 enableHostControls: true, // Add this to enable host controls
               ),
               AgoraVideoButtons(
