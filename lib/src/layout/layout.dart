@@ -67,30 +67,12 @@ class _AgoraVideoViewerState extends State<AgoraVideoViewer> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      if (canJoin()) {
-        widget.client.sessionController
-            .updateLayoutType(updatedLayout: widget.layoutType);
-      }
-    });
-  }
 
-  bool canJoin() {
-    if (widget.layoutType == Layout.tPRC &&
-        widget.client.sessionController.value.users.length > 1) {
-      setState(() {
-        canJoinCall = false;
-      });
-    }
-
-    return canJoinCall;
+    widget.client.sessionController
+        .updateLayoutType(updatedLayout: widget.layoutType);
   }
 
   Widget _returnLayoutClass({required Layout layout}) {
-    if (!canJoinCall) {
-      return Text("Nope");
-    }
-
     switch (layout) {
       case Layout.floating:
         return FloatingLayout(

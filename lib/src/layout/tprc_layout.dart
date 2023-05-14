@@ -110,8 +110,6 @@ class _TPRCLayoutState extends State<TPRCLayout> {
   Widget _viewTPRC() {
     final participantUid = getParticipantIndex();
 
-    print("Line 111 : ${widget.client.sessionController.value.users.length}");
-
     if (widget.client.sessionController.value.users.length > 1) {
       setState(() {
         canJoinCall = false;
@@ -146,14 +144,6 @@ class _TPRCLayoutState extends State<TPRCLayout> {
 
   @override
   Widget build(BuildContext context) {
-    if (widget.client.sessionController.value.users.length > 1) {
-      return Center(
-        child: Container(
-          child: Text("Can't Join Call"),
-        ),
-      );
-    }
-
     return ValueListenableBuilder(
       valueListenable: widget.client.sessionController,
       builder: (context, AgoraSettings agoraSettings, widgetx) {
