@@ -64,6 +64,8 @@ class TPRCLayout extends StatefulWidget {
 }
 
 class _TPRCLayoutState extends State<TPRCLayout> {
+  bool canJoinCall = true;
+
   Widget _getLocalViews() {
     return AgoraVideoView(
       controller: VideoViewController(
@@ -109,6 +111,12 @@ class _TPRCLayoutState extends State<TPRCLayout> {
     final participantUid = getParticipantIndex();
 
     print("Line 111 : ${widget.client.sessionController.value.users.length}");
+
+    if (widget.client.sessionController.value.users.length > 1) {
+      setState(() {
+        canJoinCall = false;
+      });
+    }
 
     return widget.client.sessionController.value.users.isNotEmpty
         ? Stack(

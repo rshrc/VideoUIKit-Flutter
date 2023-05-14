@@ -62,14 +62,35 @@ class AgoraVideoViewer extends StatefulWidget {
 }
 
 class _AgoraVideoViewerState extends State<AgoraVideoViewer> {
+  bool canJoinCall = true;
+
   @override
   void initState() {
-    widget.client.sessionController
-        .updateLayoutType(updatedLayout: widget.layoutType);
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      if (canJoin()) {
+        widget.client.sessionController
+            .updateLayoutType(updatedLayout: widget.layoutType);
+      }
+    });
+  }
+
+  bool canJoin() {
+    if (widget.layoutType == Layout.tPRC &&
+        widget.client.sessionController.value.users.length > 1) {
+      setState(() {
+        canJoinCall = false;
+      });
+    }
+
+    return canJoinCall;
   }
 
   Widget _returnLayoutClass({required Layout layout}) {
+    if (!canJoinCall) {
+      return Text("Nope");
+    }
+
     switch (layout) {
       case Layout.floating:
         return FloatingLayout(
