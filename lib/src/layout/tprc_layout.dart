@@ -138,7 +138,7 @@ class _TPRCLayoutState extends State<TPRCLayout> {
 
   @override
   Widget build(BuildContext context) {
-    if (widget.client.sessionController.value.users.length == 1) {
+    if (widget.client.sessionController.value.users.length > 1) {
       return Container(
         child: Text("Can't Join Call"),
       );
