@@ -1,3 +1,21 @@
+## 1.3.7
+- Fixes active speaker bug when user overrides with manual pin
+- Updates permission_handler to v11.0.0
+
+## 1.3.6
+
+- Fixes error [[#151](https://github.com/AgoraIO-Community/VideoUIKit-Flutter/issues/151)
+- Updating RTC to v6.2.2
+
+## 1.3.5
+
+- Allow for wider range of `http` packages
+
+## 1.3.4
+
+- Fixes error [#137](https://github.com/AgoraIO-Community/VideoUIKit-Flutter/issues/137)
+- Setting RTC to v6.1.0 and RTM to v1.5.0
+
 ## 1.3.3
 
 - BREAKING CHANGE: VideoSourceType for `onFirstLocalVideoFrame` callback
