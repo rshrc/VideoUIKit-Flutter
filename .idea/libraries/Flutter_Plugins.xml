@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
     <CLASSES>
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/permission_handler-10.2.0" />
       <root url="file://$PROJECT_DIR$" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/agora_rtc_engine-6.1.1" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/agora_rtm-1.5.0" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/iris_method_channel-1.1.0-rc.5" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/agora_rtm-1.5.8" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/agora_rtc_engine-6.2.2" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/iris_method_channel-1.2.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/permission_handler-11.0.1" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

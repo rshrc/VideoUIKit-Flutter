@@ -43,21 +43,25 @@ class TPRCLayout extends StatefulWidget {
   final bool? useFlutterTexture;
   final bool? useAndroidSurfaceView;
 
-  const TPRCLayout({
-    Key? key,
-    required this.client,
-    this.floatingLayoutContainerHeight,
-    this.floatingLayoutContainerWidth,
-    this.floatingLayoutMainViewPadding = const EdgeInsets.fromLTRB(3, 0, 3, 3),
-    this.floatingLayoutSubViewPadding = const EdgeInsets.fromLTRB(3, 3, 0, 3),
-    this.disabledVideoWidget = const DisabledVideoWidget(),
-    this.showAVState = false,
-    this.enableHostControl = false,
-    this.showNumberOfUsers,
-    this.renderModeType = RenderModeType.renderModeHidden,
-    this.useAndroidSurfaceView = false,
-    this.useFlutterTexture = false,
-  }) : super(key: key);
+  final String? conditionText;
+
+  const TPRCLayout(
+      {Key? key,
+      required this.client,
+      this.floatingLayoutContainerHeight,
+      this.floatingLayoutContainerWidth,
+      this.floatingLayoutMainViewPadding =
+          const EdgeInsets.fromLTRB(3, 0, 3, 3),
+      this.floatingLayoutSubViewPadding = const EdgeInsets.fromLTRB(3, 3, 0, 3),
+      this.disabledVideoWidget = const DisabledVideoWidget(),
+      this.showAVState = false,
+      this.enableHostControl = false,
+      this.showNumberOfUsers,
+      this.renderModeType = RenderModeType.renderModeHidden,
+      this.useAndroidSurfaceView = false,
+      this.useFlutterTexture = false,
+      this.conditionText})
+      : super(key: key);
 
   @override
   State<TPRCLayout> createState() => _TPRCLayoutState();
@@ -139,7 +143,10 @@ class _TPRCLayoutState extends State<TPRCLayout> {
               ),
             ],
           )
-        : Container();
+        : Container(
+            child:
+                Text(widget.conditionText ?? "Waiting for others to join..."),
+          );
   }
 
   @override
